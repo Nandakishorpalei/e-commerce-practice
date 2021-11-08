@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         #container{
+            width:95%;
+            height:auto;
+            display: grid;
+            grid-gap:40px;
+            grid-template-columns: repeat(4,1fr);
+            margin:auto;
+            text-align: center;
+            background-color:cyan;
+            padding:20px;
+        }
+        #container > div{
+            height:auto;
+            width:95%;
+            box-shadow: rgba(148, 148, 156, 0.2) 0px 7px 29px 0px;
+            background-color:rgba(13, 177, 177, 0.322);
+            text-align: center;
+            margin-right:40px;
+            padding:10px;
+        }
+        #container > div > img{
+            height:250px;
+
+        }
+        #container > div > button{
+            font-size:24px;
+            padding:5px;
+            background-color: cyan;
+            width:80%;
+            border-radius:5px;
+            font-weight:1000;
+            font-family:'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>Product Page</h1>
+    <select id="selectItem" onChange="sortItem()">
+        <option value="">Sort by Price</option>
+        <option value="low">Low to High</option>
+        <option value="high">High to Low</option>
+    </select>
+    <select id="selectbyName" onChange="sortbyName()">
+        <option value="">Sort by Name</option>
+        <option value="asc">Ascending order</option>
+        <option value="des">Descending order</option>
+    </select>
+    <div id="container">
+        <div id="imgDiv"></div>
+    </div>
+
+    <script src="product.js"></script>
+</body>
+</html>
